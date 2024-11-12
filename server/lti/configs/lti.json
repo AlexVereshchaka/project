@@ -1,0 +1,42 @@
+{
+  "https://dl.nure.ua": [
+    {
+      "default": false,
+      "client_id": "aPpLTy30dkuAFCH",
+      "auth_login_url": "https://dl.nure.ua/mod/lti/auth.php",
+      "auth_token_url": "https://dl.nure.ua/mod/lti/token.php",
+      "auth_audience": null,
+      "key_set_url": "https://dl.nure.ua/mod/lti/certs.php",
+      "key_set": null,
+      "private_key_file": "private.key",
+      "public_key_file": "public.key",
+      "deployment_ids": ["7"]
+    },
+    {
+      "default": true,
+      "client_id": "tt0ZFF1ChD6jUBn",
+      "auth_login_url": "https://dl.nure.ua/mod/lti/auth.php",
+      "auth_token_url": "https://dl.nure.ua/mod/lti/token.php",
+      "auth_audience": null,
+      "key_set_url": "https://dl.nure.ua/mod/lti/certs.php",
+      "key_set": null,
+      "private_key_file": "private.key",
+      "public_key_file": "public.key",
+      "deployment_ids": ["8"]
+    }
+  ],
+  "http://localhost": [
+    {
+      "default": true,
+      "client_id": "21LoomjSHVDf0rj",
+      "auth_login_url": "http://localhost/mod/lti/auth.php",
+      "auth_token_url": "http://localhost/mod/lti/token.php",
+      "auth_audience": null,
+      "key_set_url": "http://localhost/mod/lti/certs.php",
+      "key_set": null,
+      "private_key_file": "private.key",
+      "public_key_file": "public.key",
+      "deployment_ids": ["1"]
+    }
+  ]
+}

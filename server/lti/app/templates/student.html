@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        const taskId = "{{ task_id }}";
+        const email = "{{ email }}";
+        const launchID = "{{ launch_id }}";
+    </script>
+    <script type="text/javascript" defer src="{{ url_for('static', filename='js/socket.js') }}"
+            charset="utf-8"></script>
+    {% if task %}
+        <script type="text/javascript" defer src="{{ url_for('static', filename='js/test_runner.js') }}"></script>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <h1>Test for: {{ email }}</h1>
+        <h2>Server state: <span style="color: red" id="server-state">off</span></h2>
+        {% if task %}
+            <pre>{{ task.description }}</pre>
+            <h3>Tests</h3>
+            <ul id="tests">
+                {% for test in tests %}
+                    <li id="test-{{ test.file_name }}" data-test-name="{{ test.file_name }}">
+                        <span class="test-desc">{{ test.description }}</span>
+                        <div class="result d-flex"></div>
+                    </li>
+                {% endfor %}
+            </ul>
+            <button id="btn-run" class="btn btn-success">Run tests</button>
+        {% else %}
+            <h3>There is no task yet :(</h3>
+        {% endif %}
+    </div>
+{% endblock %}
